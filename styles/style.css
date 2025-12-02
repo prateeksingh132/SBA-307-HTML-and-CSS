@@ -110,13 +110,17 @@ body {
 
 
 /* -------------- Main Container-------------- */
-/* same on every page */
+/* Goal: same on every page */
+/* Goal: make sure container boxes are evenly spaced */
+/* used this sticky footer example : https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/ */
 .main_container {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
-    flex: 1;
+    /* Dont use flex-grow=1. It doesnt change anything on the main page and footer is sticking at the bottom regardless, keeps this for future debugging */
+    /* flex-grow: 1; Important: it keeps the spacing even between all the container boxes ,see lecture 307.4 slide 14 for ratio info and future debugging if you wanna change the spacing */
+    /* flex-grow: 1; */
 }
 
 
@@ -135,7 +139,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    /* use it more often for spacing, works better than margin */
+    /* gap: use it more often for spacing, works better than margin, see your notes */
     margin-top: 20px;
 }
 
