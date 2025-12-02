@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Account</title>
+</head>
+
+<body>
+
+    <!-------------- Steps -------------->
+    <!-- Step 1: Divide your page (all pages) into 3 main containers with vertical alignment (style that in css using flex direction, see class example on github and lecture slide 307.4 for future debugging if it things fail) -->
+    <!-- Step 2: 1st container - Nav bar, 2nd container - Our main Content, 3rd container - Footer container -->
+    <!-- Step 3: nav bar - use the class example (307.2 lecture practice on github) for designing, for dropdown, search google for examples. have logo on left side and your pages links on right side -->
+    <!-- Step 4: main content - divide it into 2 containers - one for a header message, one for the forms - if you can, have the two forms side by side on same page, it gives a clean look, or if not, just use your PA code (PA-307.2.2) and have the two forms on two different pages -->
+    <!-- Step 5: Bottom container: See amazon's page footer code for reference - maybe not make it that big -->
+    <!------------------------------------>
+
+    <!-- Nav Bar -->
+    <nav class="navContainer">
+        <!-- Using inline styling -->
+        <div class="logoBox"><a href="../index.html" style="color: white; text-decoration: none;">GadgetShack</a></div>
+        <div class="linksBox">
+            <a href="../index.html">Home</a>
+            <div class="dropdownBox">
+                <a href="products.html">Products &#9662;</a>
+                <!-- &#9662; down arrow unicode, w3schools down arrow code didn't work -->
+                <div class="dropdownContent">
+                    <a href="products.html">Laptops</a>
+                    <a href="products.html">Phones</a>
+                </div>
+            </div>
+            <a href="account.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main container between nav bar and footer section -->
+    <div class="main_container">
+
+        <!-- Using inline styling here to bypass the default h1 styling from external css -->
+        <div>
+            <h1 style="text-align: center; border-bottom: 2px solid orange; padding-bottom: 10px;">Welcome Back</h1>
+            <p style="text-align: center;">Please login or create an account below.</p>
+        </div>
+
+        <!-- Forms container -->
+        <!-- Goal: create two forms side by side, so create a single container first and add two forms in them, refer to the code you did in the PA activity-->
+        <!-- The class activity code using fieldset and checkboxes gave me issue in format and alignment, so I decided to refer a simple w3school login form example-->
+        <!-- link: https://www.w3schools.com/howto/howto_css_login_form.asp -->
+        <div class="form_container">
+            <div class="formBox">
+                <form action="#">
+                    <h2>Sign In</h2>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+
+                    <label>Password:</label>
+                    <input type="password" name="password" placeholder="Enter Your Password" required>
+
+                    <button type="submit" class="submitBtn">Login</button>
+
+                    <!-- checkbox, Note: use the inline styling to bypass the 95% input width from extrenal styling-->
+                    <label>Remember me: </label>
+                    <input type="checkbox" checked="checked" name="remember" style="width: auto;">
+
+                </form>
+            </div>
+
+            <div class="formBox">
+                <form action="#">
+                    <h2>Register</h2>
+                    <label>Name:</label>
+                    <input type="text" name="fullname" placeholder="Enter Your Name" required>
+
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+
+                    <label>Password:</label>
+                    <input type="password" name="password" placeholder="Enter Your Password" required>
+
+                    <button type="submit" class="submitBtn">Create Account</button>
+
+                    <!-- checkbox, Note: use the inline styling to bypass the 95% input width from extrenal styling-->
+                    <label>Save your details: </label>
+                    <input type="checkbox" checked="checked" name="remember" style="width: auto;">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <!-- Goal: Footer stays the same across all pages -->
+    <div class="bottomContainer">
+        <p>&copy; 2025 GadgetShack.</p> <!-- &copy; unicode for copyright symbol -->
+    </div>
+
+
+</body>
+
+</html>

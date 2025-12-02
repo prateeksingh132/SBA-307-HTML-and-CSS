@@ -1,15 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>SBA 307: HTML and CSS</title>
+    <title>GadgetShack</title>
+
+    <!-- using internal styling for the hero banner  -->
+    <style>
+        .topBannerBox {
+            background-color: #333;
+            width: 90%;
+            height: 400px;
+            /* keep it at this height value, other values make gif distorted */
+            margin: auto;
+            margin-bottom: 30px;
+            border: 5px solid black;
+            /* Animation 2: Size/Transform transition */
+            transition: transform 0.5s;
+        }
+
+        /* styling for gif inside the box */
+        .topBannerBox img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Important: object-fit is needed because it makes the gif covers the box without distortion, see lesson 307.3 example again for futur debugging if formatting fails  */
+            display: block;
+            /* Important: display block makes our gif covers the box without distortion */
+        }
+
+        /* Animation for hero banner box */
+        .topBannerBox:hover {
+            transform: scale(1.05);
+            /* this scale works better than 1.1 we did in class bcuz the box is big */
+            border: 1px solid orange;
+        }
+    </style>
+
 </head>
+
 <body>
-    
-    
+
+    <!-------------- Steps -------------->
+    <!-- Step 1: Divide your page (all pages) into 3 main containers with vertical alignment (style that in css using flex direction, see class example on github and lecture slide 307.4 for future debugging if it things fail) -->
+    <!-- Step 2: 1st container - Nav bar, 2nd container - Our main Content, 3rd container - Footer container -->
+    <!-- Step 3: nav bar - use the class example (307.2 lecture practice on github) for designing, for dropdown, search google for examples. have logo on left side and your pages links on right side -->
+    <!-- Step 4: main content - divide it into 3 container - hero message, hero gif, hot deals boxes - keep it cleaner and dont add many boxes, it can mess up the page alignment -->
+    <!-- Step 5: Bottom container: See amazon's page footer code for reference - maybe not make it that big -->
+    <!------------------------------------>
+
+    <!-- Nav Bar -->
+    <nav class="navContainer">
+        <!-- Using inline styling -->
+        <div class="logoBox"><a href="index.html" style="color: white; text-decoration: none;">GadgetShack</a></div>
+        <div class="linksBox">
+            <a href="index.html">Home</a>
+            <div class="dropdownBox">
+                <a href="./pages/products.html">Products &#9662;</a>
+                <!-- &#9662; down arrow unicode, w3schools down arrow code didn't work -->
+                <div class="dropdownContent">
+                    <a href="./pages/products.html">Laptops</a>
+                    <a href="./pages/products.html">Phones</a>
+                    <a href="./pages/products.html">Deals</a>
+                </div>
+            </div>
+            <a href="./pages/account.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main container between nav bar and footer section -->
+    <div class="main_container">
+
+        <div class="heroBanner">
+            <!-- Using inline styling here to bypass the default h1 styling from external css -->
+            <h1 style="text-align: center; border-bottom: 2px solid orange; padding-bottom: 10px;">Welcome to
+                GadgetShack</h1>
+            <p style="text-align: center;">Best tech for the best prices.</p>
+        </div>
+
+        <div class="topBannerBox">
+            <!-- <h1 style="color: white;">Welcome to GadgetShack</h1>
+            <p>Best tech for the best prices.</p> -->
+            <!-- <br> -->
+            <img src="./images/heroAnimation.gif" alt="Sale Animation" width="300">
+        </div>
+
+        <h2 style="text-align: center;">Featured Items</h2>
+
+        <!-- Goal: have 3 products boxes on home, 4 in product page -->
+        <div class="products_container">
+            <div class="itemBox">
+                <img src="./images/gamingLaptop.jpg" alt="Laptop">
+                <h3>Gaming Laptop</h3>
+                <p>$1200</p>
+            </div>
+            <div class="itemBox">
+                <img src="./images/smartphones.jpg" alt="Phone">
+                <h3>Smartphone 5G</h3>
+                <p>$800</p>
+            </div>
+            <div class="itemBox">
+                <img src="./images/headset.jpg" alt="Headphones">
+                <h3>Headset</h3>
+                <p>$150</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <!-- Goal: Footer stays the same across all pages -->
+    <div class="bottomContainer">
+        <p>&copy; 2025 GadgetShack.</p> <!-- &copy; unicode for copyright symbol -->
+    </div>
 
 
 </body>
+
 </html>

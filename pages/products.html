@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Products</title>
+</head>
+
+<body>
+
+    <!-------------- Steps -------------->
+    <!-- Step 1: Divide your page (all pages) into 3 main containers with vertical alignment (style that in css using flex direction, see class example on github and lecture slide 307.4 for future debugging if it things fail) -->
+    <!-- Step 2: 1st container - Nav bar, 2nd container - Our main Content, 3rd container - Footer container -->
+    <!-- Step 3: nav bar - see the class example (307.2-lecture-practice on github) for designing; for dropdown, search google for examples; have logo on left side and your pages links on right side -->
+    <!-- Step 4: main content - divide it into 2 container - one for product boxes and one for table  -->
+    <!-- Step 5: Bottom container: See amazon's page footer code for reference - maybe not make it that big -->
+    <!------------------------------------>
+
+    <!-- Nav Bar -->
+    <nav class="navContainer">
+        <!-- Using inline styling -->
+        <div class="logoBox"><a href="../index.html" style="color: white; text-decoration: none;">GadgetShack</a></div>
+        <div class="linksBox">
+            <a href="../index.html">Home</a>
+            <div class="dropdownBox">
+                <a href="products.html">Products &#9662;</a>
+                <!-- &#9662; down arrow unicode, w3schools down arrow code didn't work -->
+                <div class="dropdownContent">
+                    <a href="products.html">Laptops</a>
+                    <a href="products.html">Phones</a>
+                </div>
+            </div>
+            <a href="account.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main container between nav bar and footer section -->
+    <div class="main_container">
+        <!-- Using inline styling -->
+        <h1 style="text-align: center; border-bottom: 2px solid orange; padding-bottom: 10px;">Our Catalog</h1>
+
+        <div class="products_container">
+            <div class="itemBox">
+                <img src="../images/proLaptop.jpg" alt="Item 1">
+                <h3>Pro Laptop</h3>
+                <p>$999</p>
+            </div>
+            <div class="itemBox">
+                <img src="../images/tablet.jpg" alt="Item 2">
+                <h3>Tablet 10"</h3>
+                <p>$450</p>
+            </div>
+            <div class="itemBox">
+                <img src="../images/smartwatch.jpg" alt="Item 3">
+                <h3>Smart Watch</h3>
+                <p>$199</p>
+            </div>
+            <div class="itemBox">
+                <img src="../images/speaker.jpg" alt="Item 4">
+                <h3>Speaker</h3>
+                <p>$250</p>
+            </div>
+        </div>
+
+        <br>
+        <h2>Specs Sheet</h2>
+
+        <!--  Goal: create a 5 column simple table to show product specifications -->
+        <!-- Create it similar to the table example given on mozilla.org link -->
+        <!-- link: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility -->
+        <div class="tableBox">
+            <table class="specTable">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Processor</th>
+                        <th>Memory</th>
+                        <th>Storage</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pro Laptop</td>
+                        <td>Intel i7</td>
+                        <td>16GB</td>
+                        <td>512GB</td>
+                        <td>$999</td>
+                    </tr>
+                    <tr>
+                        <td>Tablet 10"</td>
+                        <td>A14 Chip</td>
+                        <td>4GB</td>
+                        <td>128GB</td>
+                        <td>$450</td>
+                    </tr>
+                    <tr>
+                        <td>Desktop PC</td>
+                        <td>AMD Ryzen</td>
+                        <td>32GB</td>
+                        <td>1TB</td>
+                        <td>$1500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <!-- Goal: Footer stays the same across all pages -->
+    <div class="bottomContainer">
+        <p>&copy; 2025 GadgetShack.</p>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

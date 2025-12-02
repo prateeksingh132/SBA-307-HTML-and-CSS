@@ -4,6 +4,7 @@ body {
     padding: 0;
     height: 100%;
     box-sizing: border-box;
+    /* background-color: black; */
 }
 
 *,
@@ -11,3 +12,249 @@ body {
 *::after {
     box-sizing: inherit;
 }
+
+/* -------------- Main Page Styling --------------*/
+/* Goal: stack the 3 main containers, nav bar, main content, footer note vertically on all pages  */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column; /*Important: 'column' - to vertically stack all my containers*/
+}
+
+/* -------------- Nav Section ----------------*/
+/* Goal: keep logo on left side on all pages and pages links on right side */
+.navContainer {
+    background-color: #2c3e50;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    /* Important: didn't work properly with space-evenly or space-around, only space-between works best, keeps the logoBox div in the left end and linkBox div in the right*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* For logo: GadgetShack on top-left, Goal: keep it on left side and add proper margin on all pages*/
+.logoBox {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+/* For link div: all pages on top-right, Goal: keep it on right side and add proper margin on all pages*/
+.linksBox {
+    margin-right: 5%;
+    display: flex;
+    /* Don't use it, space-between in .navContainer covered this, doesnt make any difference on page */
+    /* justify-content: end; */
+    gap: 25px;
+    /* spacing between links, use this, better than margin, from google search, see notes */
+}
+
+/* For links themselves */
+.linksBox a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    /* Transition Animation */
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+/* Animation 1: Color change on hover */
+.linksBox a:hover {
+    color: orange;
+}
+
+/* ------------------------------*/
+
+
+
+
+/* -------------- Dropdown Menu --------------  */
+/* Referred w3schools link: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+/* Didn't get fully, ask in class */
+.dropdownBox {
+    float: left;
+    /* W3school says we have to use float the div to align it next to links, clarify why we need this separately? it doesn't make any differece if i remove it. */
+    overflow: hidden;
+}
+
+/* See the 'Example explained' section (at end of screen) on w3school link for description */
+.dropdownContent {
+    display: none; /* this keeps the dropdown hidden, 'block' will make it visible, added in the hover styling below */
+    position: absolute;
+    /* absolute: needed to position it properly below the product on hover */
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* z- index: w3schools page says it place the dropdown in front of other elements, but even if i remove it nothing changes, find out why? */
+}
+
+.dropdownContent a {
+    color: black;
+    padding: 12px;
+    display: block;
+}
+
+/* Hover to show menu */
+.dropdownBox:hover .dropdownContent {
+    display: block; /* this makes the dropdopwn menu appear on hover*/
+}
+
+/* ------------------------------*/
+
+
+
+
+/* -------------- Main Container-------------- */
+/* same on every page */
+.main_container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    flex: 1;
+}
+
+
+h1,
+h2 {
+    color: #333;
+}
+
+/* ------------------------------*/
+
+
+/* -------------- Products boxes --------------*/
+/* Goal: make sure the individual product boxes wraps to next line when window size changes */
+.products_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    /* use it more often for spacing, works better than margin */
+    margin-top: 20px;
+}
+
+/* Goal: For animation, when the transform property changes, I want it to do this a little smoothly */
+.itemBox {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+
+    /* Animation 2: Size/Transform transition */
+    transition: transform 0.5s;
+}
+
+.itemBox:hover {
+    /* box-shadow: 0 5px 10px rgba(0,0,0,0.1); */
+    transform: scale(1.05);
+    /* Animation 3: Slight grow effect */
+    border: 1px solid orange;
+}
+
+.itemBox img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------*/
+
+
+
+
+/* -------------- Table -------------- */
+/* Goal: make sure that table aligns perfectly  */
+/* Use the table example given on mozilla.org page, link: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility */
+.specTable {
+    width: 100%;
+    border-collapse: collapse;
+    /* this removes the double borders, makes it look nice, change it later if you don't like the look */
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* ------------------------------*/
+
+
+
+
+/* -------------- Account Forms -------------- */
+/* Goal: place the 2 forms side by side on larger screens (similar to the activity you did in the class), wrap them on smaller screens */
+/* The class activity code using fieldset and checkboxes gave me issue in format and alignment, so I decided to refer a simple w3school login form example, use the link for future debugging */
+/* link: https://www.w3schools.com/howto/howto_css_login_form.asp */
+.form_container {
+    display: flex;
+    justify-content: space-around;
+    /* Note: space between and space evenly messes up the alignment, use space-around */
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.formBox {
+    background-color: white;
+    padding: 25px;
+    width: 40%;
+    min-width: 300px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 95%;
+    /* Important: to avoid the input box going out of the form box, keep it 95% for all inputs, change it inline separatelyfor checkboxes */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+
+.submitBtn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    /* transition for button */
+    transition-duration: 0.3s;
+}
+
+.submitBtn:hover {
+    background-color: orange;
+}
+
+/* ------------------------------*/
+
+
+/* -------------- Footer -------------- */
+/* Goal: check the amazon page css styling for the footer design */
+.bottomContainer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* ------------------------------*/

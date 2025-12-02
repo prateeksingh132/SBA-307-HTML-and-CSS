@@ -2,8 +2,11 @@
 
 
 # My Application Name
-- Brief Description
+- Brief Description:
+
+I create a small and simple electronics ecommerce website called GadgetShack.
+
 
 ## Technologies Used:
-- HTML
+- HTML5
 - CSS
