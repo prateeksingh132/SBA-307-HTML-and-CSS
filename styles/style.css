@@ -50,7 +50,7 @@ body {
     /* Don't use it, space-between in .navContainer covered this, doesnt make any difference on page */
     /* justify-content: end; */
     gap: 25px;
-    /* spacing between links, use this, better than margin, from google search, see notes */
+    /* gap: spacing between links, use this, better than margin, from google search, see notes */
 }
 
 /* For links themselves */
@@ -239,8 +239,8 @@ input {
     cursor: pointer;
     width: 100%;
     font-size: 16px;
-    /* transition for button */
-    transition-duration: 0.3s;
+    /* Animation: transition for button */
+    transition-duration: 0.7s;
 }
 
 .submitBtn:hover {
