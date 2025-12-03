@@ -13,6 +13,8 @@ My website has 3 main pages:
 2. **Products:** This page shows catalog of products with their prices. I also have a table here which compare the product's specs.
 3. **Account** This page has my 2 forms: Login form and Register form.
 
+I used a dark blue and orange color theme (used Coolors.com).
+
 # Technologies Used:
 - HTML
 - CSS
@@ -31,9 +33,9 @@ b. Checkbox on my form pages gave me issue with alignment. The issue was the def
 
 **What would you add to or change about your website if given more time?**
 
-a. Add more cool animations using transition and transform concepts.
+a. I used transition:transform and hover to create some animations. Maybe I will add more cool animations using transition and even do something with media queries.
 
-b. Use media queries. maybe try bootstrap to achieve cool animations.
+b. Try bootstrap to achieve more cool animations.
 
 
 **Use this space to make notes for your future self about anything that you think is important to remember about this process, or that may aid you when attempting something similar again.**

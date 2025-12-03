@@ -19,7 +19,8 @@ body {
     background-color: #f4f4f4;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    flex-direction: column; /*Important: 'column' - to vertically stack all my containers*/
+    flex-direction: column;
+    /*Important: 'column' - to vertically stack all my containers*/
 }
 
 /* -------------- Nav Section ----------------*/
@@ -84,13 +85,15 @@ body {
 
 /* See the 'Example explained' section (at end of screen) on w3school link for description */
 .dropdownContent {
-    display: none; /* this keeps the dropdown hidden, 'block' will make it visible, added in the hover styling below */
+    display: none;
+    /* this keeps the dropdown hidden, 'block' will make it visible, added in the hover styling below */
     position: absolute;
     /* absolute: needed to position it properly below the product on hover */
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* z- index: w3schools page says it place the dropdown in front of other elements, but even if i remove it nothing changes, find out why? */
+    z-index: 1;
+    /* z- index: w3schools page says it place the dropdown in front of other elements, but even if i remove it nothing changes, find out why? */
 }
 
 .dropdownContent a {
@@ -101,7 +104,8 @@ body {
 
 /* Hover to show menu */
 .dropdownBox:hover .dropdownContent {
-    display: block; /* this makes the dropdopwn menu appear on hover*/
+    display: block;
+    /* this makes the dropdopwn menu appear on hover*/
 }
 
 /* ------------------------------*/
