@@ -29,7 +29,7 @@ I should have drawn the layout on paper or at least created a wireframe first. I
 
 a. The dropdown menu gave me the most trouble. I tried to use the lecture slide example to create it, but it messed up my flexbox layout. So, finally I looked up a tutorial on w3schools for it, which had hover to reveal example and it combines position ('position: absolute'), display ('display: none and block') and pseudo class (':hover') concept to achieve the same.  
 
-b. Checkbox on my form pages gave me issue with alignment. The issue was the default input width in my css code was messing it up, I had to use a separate inline styling for the checkboxes to corect it.
+b. Checkbox on my form pages gave me issue with alignment. The issue was the default input width in my css code was messing it up, I had to use a separate inline styling for the checkboxes to correct it.
 
 **What would you add to or change about your website if given more time?**
 
